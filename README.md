@@ -52,6 +52,6 @@ This command will generate a dist as build folder in the root of your template t
 
 React and Tailwind are two popular technologies that have taken the web development world by storm. React is a JavaScript library for building user interfaces, while Tailwind is a utility-first CSS framework that makes it easy to style web applications.
 
-### Version 1.0.0 - Initial Release - [Mar 13, 2023]
+### Version 1.0.0 - Initial Release - [Mar 04, 2024]
 
 - Initial release of Ecom dashboard React.

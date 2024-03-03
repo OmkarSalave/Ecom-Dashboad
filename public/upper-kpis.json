@@ -1,0 +1,24 @@
+{
+  "data": {
+    "sales": {
+      "total": 500000,
+      "average": 100,
+      "percentage": 80
+    },
+    "profit": {
+      "total": 385000,
+      "average": 82,
+      "percentage": 77
+    },
+    "products": {
+      "total": 150,
+      "average": 2,
+      "percentage": 25
+    },
+    "users": {
+      "total": 10000,
+      "average": 1,
+      "percentage": 20
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "data": {
+    "user_analytics": {
+      "monthly": {
+        "data": [48, 33, 15, 5],
+        "desktop": 48,
+        "mobile": 33,
+        "tablet": 15,
+        "other": 5
+      },
+      "yearly": {
+        "data": [56, 34, 8, 2],
+        "desktop": 56,
+        "mobile": 34,
+        "tablet": 8,
+        "other": 2
+      }
+    }
+  }
+}

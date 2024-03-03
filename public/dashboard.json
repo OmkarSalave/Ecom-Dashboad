@@ -1,0 +1,64 @@
+{
+  "data": {
+    "product_history": [
+      {
+        "name": "Puma shoes",
+        "month_filter": [
+          123, 121, 132, 127, 113, 122, 137, 125, 144, 162, 130, 145
+        ],
+        "week_filter": [55, 43, 53, 62],
+        "day_filter": [11, 13, 10, 15, 14, 12, 13]
+      },
+      {
+        "name": "Adidas shoes",
+        "month_filter": [
+          120, 125, 136, 130, 145, 135, 164, 152, 159, 136, 139, 151
+        ],
+        "week_filter": [65, 70, 75, 80],
+        "day_filter": [5, 15, 13, 7, 14, 11, 15]
+      },
+      {
+        "name": "Fogg scent",
+        "month_filter": [
+          128, 117, 178, 145, 135, 141, 150, 148, 165, 181, 184, 134
+        ],
+        "week_filter": [74, 80, 90, 85],
+        "day_filter": [16, 17, 15, 17, 18, 20, 12]
+      }
+    ],
+    "profit_report": [
+      {
+        "name": "Sales",
+        "day_filter": [44, 55, 41, 67, 22, 43, 65],
+        "week_filter": [325, 355, 341, 367],
+        "month_filter": [
+          1444, 1555, 1441, 1467, 1522, 1543, 1465, 1544, 1555, 1441, 1467, 1422
+        ]
+      },
+      {
+        "name": "Revenue",
+        "day_filter": [13, 23, 20, 8, 13, 27, 15],
+        "week_filter": [225, 255, 241, 267],
+        "month_filter": [
+          1344, 1445, 1461, 1337, 1542, 1443, 1485, 1535, 1505, 1359, 1367, 1452
+        ]
+      }
+    ],
+    "user_analytics": {
+      "monthly": {
+        "data": [48, 33, 15, 5],
+        "desktop": 48,
+        "mobile": 33,
+        "tablet": 15,
+        "other": 5
+      },
+      "yearly": {
+        "data": [56, 34, 8, 2],
+        "desktop": 56,
+        "mobile": 34,
+        "tablet": 8,
+        "other": 2
+      }
+    }
+  }
+}
