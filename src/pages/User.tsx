@@ -13,7 +13,7 @@ export default function User(): JSX.Element {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://ecom-dashboard-backend-3fh9hm4nn-omkar-salaves-projects.vercel.app/users`,
+          `https://ecom-dashboard-backend.vercel.app/users`,
         );
         const data = await response.json();
         setChartData(data?.data ?? {});

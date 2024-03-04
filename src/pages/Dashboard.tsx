@@ -29,7 +29,7 @@ const Dashboard: React.FC = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://ecom-dashboard-backend-3fh9hm4nn-omkar-salaves-projects.vercel.app/upper-kpis`,
+          `https://ecom-dashboard-backend.vercel.app/upper-kpis`,
         );
         const data = await response.json();
         setUpperKpis(data?.data);
@@ -47,7 +47,7 @@ const Dashboard: React.FC = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://ecom-dashboard-backend-3fh9hm4nn-omkar-salaves-projects.vercel.app/dashboard`,
+          `https://ecom-dashboard-backend.vercel.app/dashboard`,
         );
         const data = await response.json();
         setChartData(data?.data ?? {});

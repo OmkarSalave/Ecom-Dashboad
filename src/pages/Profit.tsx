@@ -13,7 +13,7 @@ export default function Profit(): JSX.Element {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://ecom-dashboard-backend-3fh9hm4nn-omkar-salaves-projects.vercel.app/profit`,
+          `https://ecom-dashboard-backend.vercel.app/profit`,
         );
         const data = await response.json();
         setChartData(data?.data ?? {});
