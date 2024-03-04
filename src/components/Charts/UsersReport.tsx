@@ -5,6 +5,7 @@ import ReactApexChart from 'react-apexcharts';
 import { useLocation } from 'react-router-dom';
 import UserOption from './options/UserOption';
 import { motion } from 'framer-motion';
+import Spinner from '../Spinner';
 type Props = {
   userData: any;
 };
@@ -48,12 +49,14 @@ const UsersReport = ({ userData }: Props): JSX.Element => {
       });
     }
   }, [userData, filter]);
-
+  if (!state?.series) {
+    return <Spinner />;
+  }
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      animate={{ x: [300, 0] }}
+      animate={pathname == '/user' ? { y: [300, 0] } : { x: [300, 0] }}
       transition={{
         ease: 'linear',
         duration: 0.6,
@@ -88,7 +91,7 @@ const UsersReport = ({ userData }: Props): JSX.Element => {
         <div id="chartThree" className="mx-auto flex justify-center">
           <ReactApexChart
             options={UserOption()}
-            series={state.series}
+            series={state?.series}
             type="donut"
           />
         </div>

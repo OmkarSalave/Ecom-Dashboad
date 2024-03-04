@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import ProductOptions from './options/ProductOptions';
+import Spinner from '../Spinner';
+import { useLocation } from 'react-router-dom';
 
 type Props = {
   productData: any;
@@ -15,6 +17,7 @@ interface ChartOneState {
 }
 
 const ProductReport = ({ productData }: Props): JSX.Element => {
+  const { pathname } = useLocation();
   const [filter, setFilter] = useState('day');
   const [productTotal, setProductTotal] = useState({
     totalPuma: 0,
@@ -83,13 +86,16 @@ const ProductReport = ({ productData }: Props): JSX.Element => {
     setState({ series: filteredData });
   }, [productData, filter]);
 
+  if (!state?.series) {
+    return <Spinner />;
+  }
   return (
     <motion.div
-      animate={{ y: [200, 0] }}
+      animate={pathname == '/product' ? { y: [300, 0] } : { y: [200, 0] }}
       transition={{
         ease: 'linear',
         duration: 0.4,
-        delay: 0.8,
+        delay: pathname == '/product' ? 0 : 0.8,
         times: [0],
       }}
       className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default  sm:px-7.5"
@@ -161,7 +167,7 @@ const ProductReport = ({ productData }: Props): JSX.Element => {
         <div id="chartOne" className="-ml-5">
           <ReactApexChart
             options={ProductOptions({ filter })}
-            series={state.series}
+            series={state?.series}
             type="area"
             height={500}
           />
