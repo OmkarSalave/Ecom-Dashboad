@@ -11,7 +11,9 @@ export default function Product(): JSX.Element {
     const getdashboardData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`/public/productsale.json`);
+        const response = await fetch(
+          `https://ecom-dashboard-backend.vercel.app/product`,
+        );
         const data = await response.json();
         setChartData(data?.data ?? {});
       } catch (error) {

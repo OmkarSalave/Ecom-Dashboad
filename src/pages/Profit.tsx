@@ -12,7 +12,9 @@ export default function Profit(): JSX.Element {
     const getdashboardData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`public/profit.json`);
+        const response = await fetch(
+          `https://ecom-dashboard-backend.vercel.app/profit`,
+        );
         const data = await response.json();
         setChartData(data?.data ?? {});
       } catch (error) {

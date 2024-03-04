@@ -12,7 +12,9 @@ export default function User(): JSX.Element {
     const getdashboardData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`public/user-analytics.json`);
+        const response = await fetch(
+          `https://ecom-dashboard-backend.vercel.app/users`,
+        );
         const data = await response.json();
         setChartData(data?.data ?? {});
       } catch (error) {
