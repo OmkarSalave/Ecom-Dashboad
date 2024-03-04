@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import ReactApexChart from 'react-apexcharts';
 import { useLocation } from 'react-router-dom';
 import ProfitOption from './options/ProfitOption';
+import Spinner from '../Spinner';
 
 type Props = {
   profitData: any;
@@ -45,11 +46,14 @@ const ProfitReport = ({ profitData }: Props): JSX.Element => {
     setState({ series: filteredData });
   }, [profitData, filter]);
 
+  if (!state?.series) {
+    return <Spinner />;
+  }
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      animate={{ x: [-300, 0] }}
+      animate={pathname == '/profit' ? { y: [300, 0] } : { x: [-300, 0] }}
       transition={{
         ease: 'linear',
         duration: 0.6,
@@ -90,7 +94,7 @@ const ProfitReport = ({ profitData }: Props): JSX.Element => {
         <div id="chartTwo" className="-ml-5 -mb-9">
           <ReactApexChart
             options={ProfitOption({ filter })}
-            series={state.series}
+            series={state?.series}
             type="bar"
             height={350}
           />

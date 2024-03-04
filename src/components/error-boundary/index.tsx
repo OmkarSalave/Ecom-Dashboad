@@ -41,13 +41,15 @@ export default class ErrorBoundry extends Component<myProps, MyState> {
     if (this.state.hasError) {
       return (
         <div className="w-full container">
-          <div className="d-flex justify-content-center items-center">
-            <h1 className="text-center text-black text-[10rem]">
-              Something went wrong try again later!
-            </h1>
-            <p className="text-center text-[gray] mt-1 text-[4rem]">
-              Please try after some time.
-            </p>
+          <div className="flex justify-center items-center h-[90vh] ">
+            <div>
+              <h1 className="text-center text-black text-[3rem] leading-10">
+                Something went wrong try again later!
+              </h1>
+              <p className="text-center text-[gray] mt-1 text-[2rem] leading-10">
+                Please try after some time.
+              </p>
+            </div>
           </div>
         </div>
       );
