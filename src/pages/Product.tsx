@@ -11,9 +11,7 @@ export default function Product(): JSX.Element {
     const getdashboardData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `${process.env.PUBLIC_URL}/public/productsale.json`,
-        );
+        const response = await fetch(`/public/productsale.json`);
         const data = await response.json();
         setChartData(data?.data ?? {});
       } catch (error) {

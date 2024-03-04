@@ -12,9 +12,7 @@ export default function Profit(): JSX.Element {
     const getdashboardData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `${process.env.PUBLIC_URL}/public/profit.json`,
-        );
+        const response = await fetch(`public/profit.json`);
         const data = await response.json();
         setChartData(data?.data ?? {});
       } catch (error) {

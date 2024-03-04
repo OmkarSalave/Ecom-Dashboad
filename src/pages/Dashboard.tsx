@@ -28,9 +28,7 @@ const Dashboard: React.FC = () => {
     const getUpperKpis = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `${process.env.PUBLIC_URL}/public/upper-kpis.json`,
-        );
+        const response = await fetch(`/public/upper-kpis.json`);
         const data = await response.json();
         setUpperKpis(data?.data);
       } catch (error) {
@@ -46,9 +44,7 @@ const Dashboard: React.FC = () => {
     const getdashboardData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `${process.env.PUBLIC_URL}/public/dashboard.json`,
-        );
+        const response = await fetch(`/public/dashboard.json`);
         const data = await response.json();
         setChartData(data?.data ?? {});
       } catch (error) {

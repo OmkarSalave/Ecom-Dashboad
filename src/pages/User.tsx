@@ -12,9 +12,7 @@ export default function User(): JSX.Element {
     const getdashboardData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `${process.env.PUBLIC_URL}/public/user-analytics.json`,
-        );
+        const response = await fetch(`public/user-analytics.json`);
         const data = await response.json();
         setChartData(data?.data ?? {});
       } catch (error) {
